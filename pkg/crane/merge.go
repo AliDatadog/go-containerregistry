@@ -95,6 +95,7 @@ func indexAddendumFromRemote(desc *remote.Descriptor, override *v1.Descriptor) (
 				}
 				if desc.MediaType == types.OCIImageIndex {
 					imDesc.MediaType = types.DockerManifestSchema1
+					imDesc.Annotations = nil
 				}
 
 				adds = append(adds, mutate.IndexAddendum{
